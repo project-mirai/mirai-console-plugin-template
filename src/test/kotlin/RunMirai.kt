@@ -9,8 +9,8 @@ import net.mamoe.mirai.console.terminal.MiraiConsoleTerminalLoader
 suspend fun main() {
     MiraiConsoleTerminalLoader.startAsDaemon()
 
-    ExamplePlugin.load()
-    ExamplePlugin.enable()
+    PluginMain.load()
+    PluginMain.enable()
 
     val bot = MiraiConsole.addBot(123456, "") {
         fileBasedDeviceInfo()
