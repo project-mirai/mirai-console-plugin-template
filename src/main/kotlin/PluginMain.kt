@@ -7,6 +7,7 @@ import net.mamoe.mirai.utils.info
 object PluginMain : KotlinPlugin(
     JvmPluginDescription(
         id = "org.example.mirai-plugin",
+        name = "ExamplePlugin",
         version = "0.1.0"
     )
 ) {
