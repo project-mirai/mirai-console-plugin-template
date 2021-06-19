@@ -16,7 +16,7 @@ import net.mamoe.mirai.event.events.GroupMessageEvent;
  * 文件内容改成 {@code org.example.mirai.plugin.JavaPluginMain} <br/>
  * 也就是当前主类全类名
  *
- * 使用 java 可以把 kotlin 源集删除且不会对项目有影响
+ * 使用 Java 可以把 kotlin 源集删除且不会对项目有影响
  *
  * 在 {@code settings.gradle.kts} 里改构建的插件名称、依赖库和插件版本
  *
