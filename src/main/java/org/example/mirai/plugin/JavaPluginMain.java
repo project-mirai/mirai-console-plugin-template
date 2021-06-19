@@ -7,16 +7,20 @@ import net.mamoe.mirai.event.events.FriendMessageEvent;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 
 
-/*
-使用java请把
-[/src/main/resources/META-INF.services/net.mamoe.mirai.console.plugin.jvm.JvmPlugin]
-文件内容改成[org.example.mirai.plugin.JavaPluginMain]也就是当前主类
-使用java可以把kotlin文件夹删除不会对项目有影响
-
-在settings.gradle.kts里改生成的插件mirai.jar名称
-build.gradle.kts里改依赖库和插件版本
-在主类下的JvmPluginDescription改插件名称，id和版本
-用runmiraikt这个配置可以在ide里运行，不用复制到mcl或其他启动器
+/**
+ * 使用 java 请把
+ * {@code /src/main/resources/META-INF.services/net.mamoe.mirai.console.plugin.jvm.JvmPlugin}
+ * 文件内容改成 {@code org.example.mirai.plugin.JavaPluginMain} <br/>
+ * 也就是当前主类全类名
+ *
+ * 使用 java 可以把 kotlin 源集删除且不会对项目有影响
+ *
+ * 在 {@code settings.gradle.kts} 里改构建的插件名称、依赖库和插件版本
+ *
+ * 在该示例下的 {@link JvmPluginDescription} 修改插件名称，id和版本，etc
+ *
+ * 可以使用 {@code src/test/kotlin/RunMirai.kt} 在 ide 里直接调试，
+ * 不用复制到 mirai-console-loader 或其他启动器中调试
  */
 
 public final class JavaPluginMain extends JavaPlugin {
