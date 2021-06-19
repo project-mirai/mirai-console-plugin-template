@@ -11,7 +11,7 @@ import net.mamoe.mirai.event.events.GroupMessageEvent;
 
 
 /**
- * 使用 java 请把
+ * 使用 Java 请把
  * {@code /src/main/resources/META-INF.services/net.mamoe.mirai.console.plugin.jvm.JvmPlugin}
  * 文件内容改成 {@code org.example.mirai.plugin.JavaPluginMain} <br/>
  * 也就是当前主类全类名
