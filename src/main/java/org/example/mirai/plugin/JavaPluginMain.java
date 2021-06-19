@@ -20,7 +20,7 @@ import net.mamoe.mirai.event.events.GroupMessageEvent;
  *
  * 在 {@code settings.gradle.kts} 里改构建的插件名称、依赖库和插件版本
  *
- * 在该示例下的 {@link JvmPluginDescription} 修改插件名称，id和版本，etc
+ * 在该示例下的 {@link JvmPluginDescription} 修改插件名称，id 和版本等
  *
  * 可以使用 {@code src/test/kotlin/RunMirai.kt} 在 IDE 里直接调试，
  * 不用复制到 mirai-console-loader 或其他启动器中调试
