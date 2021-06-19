@@ -1,7 +1,10 @@
 package org.example.mirai.plugin;
 
 import net.mamoe.mirai.console.plugin.jvm.JavaPlugin;
+import net.mamoe.mirai.console.plugin.jvm.JvmPluginDescription;
 import net.mamoe.mirai.console.plugin.jvm.JvmPluginDescriptionBuilder;
+import net.mamoe.mirai.event.Event;
+import net.mamoe.mirai.event.EventChannel;
 import net.mamoe.mirai.event.GlobalEventChannel;
 import net.mamoe.mirai.event.events.FriendMessageEvent;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
@@ -34,13 +37,13 @@ public final class JavaPluginMain extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("日志");
-
-        GlobalEventChannel.INSTANCE.subscribeAlways(GroupMessageEvent.class, g -> {
+        EventChannel<Event> eventChannel = GlobalEventChannel.INSTANCE.parentScope(this);
+        eventChannel.subscribeAlways(GroupMessageEvent.class, g -> {
             //监听群消息
             getLogger().info(g.getMessage().contentToString());
 
         });
-        GlobalEventChannel.INSTANCE.subscribeAlways(FriendMessageEvent.class, f -> {
+        eventChannel.subscribeAlways(FriendMessageEvent.class, f -> {
             //监听好友消息
             getLogger().info(f.getMessage().contentToString());
         });
